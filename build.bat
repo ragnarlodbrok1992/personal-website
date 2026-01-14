@@ -12,13 +12,10 @@ if not exist %build_directory% mkdir %build_directory%
 pushd %build_directory%
 
 cl /EHsc^
-	/MDd^
 	/Fe"personal-website.exe"^
 	..\src\personal_website.c^
 	/I%lib_sokol_inc%^
 	/I%lib_nuklear_inc%^
-	/I%lib_sokol_util_inc%^
-	/I%lib_dawn_inc%^
-	/link /NODEFAULTLIB:msvcrt.lib
+	/I%lib_sokol_util_inc%
 
 popd

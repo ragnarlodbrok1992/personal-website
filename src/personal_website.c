@@ -1,5 +1,4 @@
-#define SOKOL_APP_IMPL
-#define SOKOL_NUKLEAR_IMPL
+#define SOKOL_IMPL
 
 #if defined(__EMSCRIPTEN__)
 	#define SOKOL_GLES3
@@ -10,17 +9,6 @@
 #include "sokol_app.h"
 #include "sokol_gfx.h"
 #include "sokol_glue.h"
-
-#define NK_INCLUDE_FIXED_TYPES
-#define NK_INCLUDE_STANDARD_IO
-#define NK_INCLUDE_STANDARD_VARARGS
-#define NK_INCLUDE_DEFAULT_ALLOCATOR
-#define NK_INCLUDE_VERTEX_BUFFER_OUTPUT
-#define NK_INCLUDE_FONT_BAKING
-#define NK_INCLUDE_DEFAULT_FONT
-
-#include "nuklear.h"
-#include "sokol_nuklear.h"
 
 #include <stdio.h>
 
@@ -33,7 +21,6 @@ void init(void) {
 }
 
 void frame(void) {
-
 }
 
 void cleanup(void) {
